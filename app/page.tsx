@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero';
+import SearchBar from '@/components/SearchBar';
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
         </div>
 
         <div className='home__filters'>
-          {/* <SearchBar/> */}
+          <SearchBar />
 
           <div className='home__filter-container'>
             {/* <CustomFilter title='fuel'/> */}
