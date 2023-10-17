@@ -3,6 +3,7 @@
 import { useState, Fragment } from 'react';
 import Image from 'next/image';
 import { Combobox, Transition } from '@headlessui/react';
+import { ChevronUpDownIcon } from '@heroicons/react/20/solid';
 
 import { manufacturers } from '@/constants';
 import { SearchManufacturerProps } from '@/types';
@@ -43,6 +44,13 @@ const SearchManufacturer = ({
             displayValue={(manufacturer: string) => manufacturer}
             onChange={event => setQuery(event.target.value)}
           />
+
+          <Combobox.Button className='absolute inset-y-0 right-0 flex items-center pr-2'>
+            <ChevronUpDownIcon
+              className='h-5 w-5 text-gray-400'
+              aria-hidden='true'
+            />
+          </Combobox.Button>
 
           <Transition
             as={Fragment}
