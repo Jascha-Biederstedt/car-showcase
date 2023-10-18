@@ -60,7 +60,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                         alt='car model'
                         fill
                         priority
-                        className='object-contain'
+                        className='object-contain translate-y-3'
                       />
                     </div>
 
