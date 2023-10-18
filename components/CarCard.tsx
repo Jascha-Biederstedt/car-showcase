@@ -65,7 +65,7 @@ const CarCard = ({ car }: CarCardProps) => {
           </div>
         </div>
 
-        <div className='absolute car-card__btn-container'>
+        <div className='car-card__btn-container'>
           <CustomButton
             title='View More'
             containerStyles='w-full py-[16px] rounded-full bg-primary-blue'
