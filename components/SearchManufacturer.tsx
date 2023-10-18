@@ -47,7 +47,7 @@ const SearchManufacturer = ({
 
           <Combobox.Button className='absolute inset-y-0 right-0 flex items-center pr-2'>
             <ChevronUpDownIcon
-              className='h-5 w-5 text-gray-400'
+              className='h-5 w-5 text-gray-400 mr-2 md:mr-0'
               aria-hidden='true'
             />
           </Combobox.Button>
