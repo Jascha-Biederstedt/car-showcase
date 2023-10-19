@@ -42,11 +42,11 @@ const SearchBar = () => {
       window.location.pathname
     }?${searchParams.toString()}`;
 
-    router.push(`${newPathname}#searchbar`);
+    router.push(`${newPathname}#discover`);
   };
 
   return (
-    <form id='searchbar' className='searchbar' onSubmit={handleSearch}>
+    <form className='searchbar' onSubmit={handleSearch}>
       <div className='searchbar__item'>
         <SearchManufacturer
           manufacturer={manufacturer}

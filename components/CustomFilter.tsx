@@ -21,7 +21,7 @@ const CustomFilter = ({ title, options }: CustomFilterProps) => {
       window.location.pathname
     }?${searchParams.toString()}`;
 
-    router.push(newPathName);
+    router.push(`${newPathName}#discover`);
   };
 
   return (
