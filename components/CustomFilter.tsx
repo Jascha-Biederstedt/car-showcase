@@ -8,11 +8,31 @@ import { Listbox, Transition } from '@headlessui/react';
 import { CustomFilterProps } from '@/types';
 
 const CustomFilter = ({ title, options }: CustomFilterProps) => {
+  const router = useRouter();
+
   const [selected, setSelected] = useState(options[0]);
+
+  const handleUpdateParams = (event: { title: string; value: string }) => {
+    const searchParams = new URLSearchParams(window.location.search);
+
+    searchParams.set(title, event.value.toLowerCase());
+
+    const newPathName = `${
+      window.location.pathname
+    }?${searchParams.toString()}`;
+
+    router.push(newPathName);
+  };
 
   return (
     <div className='w-fit'>
-      <Listbox value={selected} onChange={event => setSelected(event)}>
+      <Listbox
+        value={selected}
+        onChange={event => {
+          setSelected(event);
+          handleUpdateParams(event);
+        }}
+      >
         <div className='relative w-fit z-10'>
           <Listbox.Button className='custom-filter__btn'>
             <span className='block truncate'>{selected.title}</span>
